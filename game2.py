@@ -17,22 +17,36 @@ pygame_screen = pygame.display.set_mode(screen_size)
 # Set a pointless caption
 pygame.display.set_caption("Goblin Chase")
 # set up a var with our image
-background_image = pygame.image.load('background.png')
+background_image = pygame.image.load('waterbackground.png')
 hero_image = pygame.image.load('hero.png')
 goblin_image = pygame.image.load('goblin.png')
+killerGoblin_image = pygame.image.load('killerGoblin.png')
+goldCoin_image = pygame.image.load('coin_gold.png')
 
 # 8. Set up the hero location
 hero = {
 	"x": 100,
 	"y": 100,
-	"speed": 20,
+	"speed": 17,
 	"wins": 0
 }
 
 goblin = {
 	"x": 200,
 	"y": 200,
+	"speed": 14
+}
+
+killerGoblin = {
+	"x": 130,
+	"y": 130,
 	"speed": 15
+}
+
+goldCoin = {
+	"x": 170,
+	"y": 170,
+	"speed": 1
 }
 
 keys = {
@@ -102,15 +116,23 @@ while game_on:
 	distance_between = fabs(hero['x'] - goblin['x']) + fabs(hero['y'] - goblin['y'])
 	if distance_between < 32:
 		# the hero and goblin are touching!
-		print "collision!"
+		print "Goblin collision!"
 	else:
-		print "not touching"
+		print "not touching Goblin"
+
+	distance_between = fabs(hero['x'] - killerGoblin['x']) + fabs(hero['y'] - killerGoblin['y'])
+	if distance_between < 32:
+		# the hero and killerGoblin are touching!
+		print "killerGoblin collision!"
+	else:
+		print "not touching killerGoblin"
+	
 
 	# 6. Fill in the screen with a color (or image)
 	# ACTUALLY RENDER SOMETHING
 	# blit takes 2 arguments...
 	# 1. What do you want to draw?
-	# 2. Where do you watn you to draw it
+	# 2. Where do you want you to draw it
 	pygame_screen.blit(background_image, [0,0])
 
 	# Make a font so we can write on the screen
@@ -120,7 +142,8 @@ while game_on:
 	
 	pygame_screen.blit(hero_image, [hero['x'],hero['y']])
 	pygame_screen.blit(goblin_image, [goblin['x'],goblin['y']])
-
+	pygame_screen.blit(killerGoblin_image, [killerGoblin['x'],killerGoblin['y']])
+	pygame_screen.blit(goldCoin_image, [goldCoin['x'],goldCoin['y']])
 	# 7. Repeat 6 over and over over...
 	pygame.display.flip()
 
