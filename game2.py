@@ -29,6 +29,7 @@ hero = {
 	"y": 100,
 	"speed": 17,
 	"wins": 0
+	"health": 100
 }
 
 goblin = {
@@ -41,6 +42,7 @@ killerGoblin = {
 	"x": 130,
 	"y": 130,
 	"speed": 15
+	
 }
 
 goldCoin = {
