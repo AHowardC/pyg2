@@ -21,7 +21,7 @@ background_image = pygame.image.load('waterbackground.png')
 hero_image = pygame.image.load('hero.png')
 goblin_image = pygame.image.load('goblin.png')
 killerGoblin_image = pygame.image.load('killerGoblin.png')
-goldCoin_image = pygame.image.load('coin_gold.png')
+goldCoinPot_image = pygame.image.load('goldCoinPot.png')
 
 # 8. Set up the hero location
 hero = {
@@ -143,7 +143,7 @@ while game_on:
 	pygame_screen.blit(hero_image, [hero['x'],hero['y']])
 	pygame_screen.blit(goblin_image, [goblin['x'],goblin['y']])
 	pygame_screen.blit(killerGoblin_image, [killerGoblin['x'],killerGoblin['y']])
-	pygame_screen.blit(goldCoin_image, [goldCoin['x'],goldCoin['y']])
+	pygame_screen.blit(goldCoinPot_image, [goldCoin['x'],goldCoin['y']])
 	# 7. Repeat 6 over and over over...
 	pygame.display.flip()
 
