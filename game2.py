@@ -128,7 +128,7 @@ while game_on:
 		print "not touching killerGoblin"
 	
 
-	# 6. Fill in the screen with a color (or image)
+	# 6. Fill in the screen with a color (or image).
 	# ACTUALLY RENDER SOMETHING
 	# blit takes 2 arguments...
 	# 1. What do you want to draw?
