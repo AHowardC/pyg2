@@ -1,1 +1,1 @@
-# DO CC each day
+# DO CC each day.
